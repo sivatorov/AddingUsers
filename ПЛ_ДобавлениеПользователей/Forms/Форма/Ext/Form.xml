@@ -1,0 +1,1827 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnPasteFromClipboard">ПриВставкеИзБуфераОбмена</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраниц" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<Page name="СтраницаСклад" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница склад</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.НазначениеВидовЦенДляСклада</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаСкладРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<InputField name="СкладыДляЗагрузки" id="39">
+							<DataPath>СкладыДляЗагрузки</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СкладыДляЗагрузкиКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="СкладыДляЗагрузкиРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<Table name="ТЗДанные" id="1">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗДанные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗДанныеКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ТЗДанныеКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="ТЗДанныеОчистить" id="252">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Очистить</CommandName>
+										<ExtendedTooltip name="ТЗДанныеОчиститьРасширеннаяПодсказка" id="253"/>
+									</Button>
+									<Button name="ВставитьИзБуфера" id="37">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВставитьИзБуфера</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ВставкаСтрок</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ВставитьИзБуфераРасширеннаяПодсказка" id="38"/>
+									</Button>
+									<Button name="ТЗДанныеЗавестиПользователей" id="42">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗавестиПользователей</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.СоздатьПартнера</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТЗДанныеЗавестиПользователейРасширеннаяПодсказка" id="43"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЗДанныеРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ТЗДанныеСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ТЗДанные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДанныеСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ТЗДанныеСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗДанныеСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>ТЗДанные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДанныеСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ТЗДанныеСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗДанныеУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>ТЗДанные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗДанныеУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТЗДанныеУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="ChoiceProcessing">ТЗДанныеОбработкаВыбора</Event>
+								<Event name="OnChange">ТЗДанныеПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ТЗДанныеНомерСтроки" id="44">
+									<DataPath>ТЗДанные.НомерСтроки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>#</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеНомерСтрокиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТЗДанныеНомерСтрокиРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="ТЗДанныеФизЛицо" id="14">
+									<DataPath>ТЗДанные.ФизЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеФизЛицоКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ТЗДанныеФизЛицоРасширеннаяПодсказка" id="16"/>
+									<Events>
+										<Event name="ChoiceProcessing">ТЗДанныеФизЛицоОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТЗДанныеДоступВ1С" id="17">
+									<DataPath>ТЗДанные.ДоступВ1С</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нет</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Нет</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Контроль</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Контроль</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Приемка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Приемка</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТЗДанныеДоступВ1СКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ТЗДанныеДоступВ1СРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="ТЗДанныеДоступВТСД" id="20">
+									<DataPath>ТЗДанные.ДоступВТСД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">Кладовщик</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">Размещение</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТЗДанныеДоступВТСДКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТЗДанныеДоступВТСДРасширеннаяПодсказка" id="22"/>
+									<Events>
+										<Event name="OnChange">ТЗДанныеДоступВТСДПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТЗДанныеСклады" id="29">
+									<DataPath>ТЗДанные.Склады</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеСкладыКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТЗДанныеСкладыРасширеннаяПодсказка" id="31"/>
+									<Events>
+										<Event name="StartChoice">ТЗДанныеСкладыНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТЗДанныеПользователь" id="23">
+									<DataPath>ТЗДанные.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеПользовательКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ТЗДанныеПользовательРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<CheckBoxField name="ТЗДанныеАвторизация" id="261">
+									<DataPath>ТЗДанные.Авторизация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТЗДанныеАвторизацияКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="ТЗДанныеАвторизацияРасширеннаяПодсказка" id="263"/>
+								</CheckBoxField>
+								<InputField name="ТЗДанныеВременныйПароль" id="26">
+									<DataPath>ТЗДанные.ВременныйПароль</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеВременныйПарольКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ТЗДанныеВременныйПарольРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="ТЗДанныеЗадачаБитрикс" id="47">
+									<DataPath>ТЗДанные.ЗадачаБитрикс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗДанныеЗадачаБитриксКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТЗДанныеЗадачаБитриксРасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<CheckBoxField name="ТЗДанныеДелегировать" id="188">
+									<DataPath>ТЗДанные.Делегировать</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТЗДанныеДелегироватьКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ТЗДанныеДелегироватьРасширеннаяПодсказка" id="190"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Копирование" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ПеренаправитьЭлектронныйДокумент</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="КопированиеРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКопирование" id="169">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа копирование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа копирование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКопированиеРасширеннаяПодсказка" id="170"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиКоманды" id="176">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки и команды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки команды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиКомандыРасширеннаяПодсказка" id="177"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаНастройки" id="181">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="182"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПерваяНастройки" id="216">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа первая настройки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа первая настройки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПерваяНастройкиРасширеннаяПодсказка" id="217"/>
+													<ChildItems>
+														<CheckBoxField name="ОчищатьНастройкиПриемника" id="178">
+															<DataPath>ОчищатьНастройкиПриемника</DataPath>
+															<CheckBoxType>Switcher</CheckBoxType>
+															<ContextMenu name="ОчищатьНастройкиПриемникаКонтекстноеМеню" id="179"/>
+															<ExtendedTooltip name="ОчищатьНастройкиПриемникаРасширеннаяПодсказка" id="180"/>
+														</CheckBoxField>
+														<CheckBoxField name="НеПереноситьИнциденты" id="185">
+															<DataPath>НеПереноситьИнциденты</DataPath>
+															<CheckBoxType>Switcher</CheckBoxType>
+															<ContextMenu name="НеПереноситьИнцидентыКонтекстноеМеню" id="186"/>
+															<ExtendedTooltip name="НеПереноситьИнцидентыРасширеннаяПодсказка" id="187"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаВтораяНастройки" id="218">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа вторая настройки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа вторая настройки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаВтораяНастройкиРасширеннаяПодсказка" id="219"/>
+													<ChildItems>
+														<InputField name="НомерЗадачиБитрикс" id="191">
+															<DataPath>НомерЗадачиБитрикс</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="НомерЗадачиБитриксКонтекстноеМеню" id="192"/>
+															<ExtendedTooltip name="НомерЗадачиБитриксРасширеннаяПодсказка" id="193"/>
+														</InputField>
+														<CheckBoxField name="ДелегироватьЗадачу" id="194">
+															<DataPath>ДелегироватьЗадачу</DataPath>
+															<CheckBoxType>Switcher</CheckBoxType>
+															<ContextMenu name="ДелегироватьЗадачуКонтекстноеМеню" id="195"/>
+															<ExtendedTooltip name="ДелегироватьЗадачуРасширеннаяПодсказка" id="196"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаТретьяНастройки" id="220">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа третья настройки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа третья настройки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаТретьяНастройкиРасширеннаяПодсказка" id="221"/>
+													<ChildItems>
+														<CheckBoxField name="УдалятьИзГрупп" id="222">
+															<DataPath>УдалятьИзГрупп</DataPath>
+															<CheckBoxType>Switcher</CheckBoxType>
+															<ContextMenu name="УдалятьИзГруппКонтекстноеМеню" id="223"/>
+															<ExtendedTooltip name="УдалятьИзГруппРасширеннаяПодсказка" id="224"/>
+														</CheckBoxField>
+														<CheckBoxField name="КопироватьНастройки" id="258">
+															<DataPath>КопироватьНастройки</DataPath>
+															<CheckBoxType>Switcher</CheckBoxType>
+															<ContextMenu name="КопироватьНастройкиКонтекстноеМеню" id="259"/>
+															<ExtendedTooltip name="КопироватьНастройкиРасширеннаяПодсказка" id="260"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКоманды" id="183">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Команды</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команды</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="184"/>
+											<ChildItems>
+												<Button name="СкопироватьНастройки" id="167">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.СкопироватьНастройки</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.MoveRight</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="СкопироватьНастройкиРасширеннаяПодсказка" id="168"/>
+												</Button>
+												<Button name="УстановитьНастройки" id="209">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.УстановитьНастройки</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.ПереслатьЭлектронноеПисьмо</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="УстановитьНастройкиРасширеннаяПодсказка" id="210"/>
+												</Button>
+												<Button name="Очистить" id="254">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.Очистить</CommandName>
+													<ExtendedTooltip name="ОчиститьРасширеннаяПодсказка" id="255"/>
+												</Button>
+												<UsualGroup name="ГруппаКомандыЛево" id="256">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команды лево</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команды лево</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКомандыЛевоРасширеннаяПодсказка" id="257"/>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИсточникПриемник" id="171">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа источник приемник</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа источник приемник</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИсточникПриемникРасширеннаяПодсказка" id="172"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаИсточник" id="64">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Источник</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа источник</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ГруппаИсточникРасширеннаяПодсказка" id="65"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаФизЛицоПользовательИсточник" id="225">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ лицо пользователь источник</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ лицо пользователь источник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаФизЛицоПользовательИсточникРасширеннаяПодсказка" id="226"/>
+													<ChildItems>
+														<InputField name="ФизЛицоИсточник" id="56">
+															<DataPath>ФизЛицоИсточник</DataPath>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ФизЛицоИсточникКонтекстноеМеню" id="57"/>
+															<ExtendedTooltip name="ФизЛицоИсточникРасширеннаяПодсказка" id="58"/>
+															<Events>
+																<Event name="ChoiceProcessing">ФизЛицоИсточникОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПользовательИсточник" id="61">
+															<DataPath>ПользовательИсточник</DataPath>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ПользовательИсточникКонтекстноеМеню" id="62"/>
+															<ExtendedTooltip name="ПользовательИсточникРасширеннаяПодсказка" id="63"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаАутентификацияИсточник" id="76">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Аутентификация</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа аутентификация источник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>StrongSeparation</Representation>
+													<ExtendedTooltip name="ГруппаАутентификацияИсточникРасширеннаяПодсказка" id="77"/>
+													<ChildItems>
+														<CheckBoxField name="ПользовательИсточникНедействителен" id="197">
+															<DataPath>ПользовательИсточник.Недействителен</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПользовательИсточникНедействителенКонтекстноеМеню" id="198"/>
+															<ExtendedTooltip name="ПользовательИсточникНедействителенРасширеннаяПодсказка" id="199"/>
+														</CheckBoxField>
+														<CheckBoxField name="ПользовательИБАутентификацияСтандартнаяИсточник" id="81">
+															<DataPath>ПользовательИБАутентификацияСтандартнаяИсточник</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПользовательИБАутентификацияСтандартнаяИсточникКонтекстноеМеню" id="82"/>
+															<ExtendedTooltip name="ПользовательИБАутентификацияСтандартнаяИсточникРасширеннаяПодсказка" id="83"/>
+														</CheckBoxField>
+														<CheckBoxField name="ПотребоватьСменуПароляПриВходеИсточник" id="203">
+															<DataPath>ПотребоватьСменуПароляПриВходеИсточник</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПотребоватьСменуПароляПриВходеИсточникКонтекстноеМеню" id="204"/>
+															<ExtendedTooltip name="ПотребоватьСменуПароляПриВходеИсточникРасширеннаяПодсказка" id="205">
+																<Title formatted="true"/>
+																<Events>
+																	<Event name="URLProcessing">ПотребоватьСменуПароляПриВходеРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+																</Events>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ПотребоватьСменуПароляПриВходеПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="АутентификацияОСИсточник" id="229">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аутентификация ОСИсточник</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аутентификация ОСИсточник</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="АутентификацияОСИсточникРасширеннаяПодсказка" id="230"/>
+															<ChildItems>
+																<CheckBoxField name="ПользовательИБАутентификацияОСИсточник" id="84">
+																	<DataPath>ПользовательИБАутентификацияОСИсточник</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПользовательИБАутентификацияОСИсточникКонтекстноеМеню" id="85"/>
+																	<ExtendedTooltip name="ПользовательИБАутентификацияОСИсточникРасширеннаяПодсказка" id="86"/>
+																	<Events>
+																		<Event name="OnChange">ПользовательИБАутентификацияОСИсточникПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<InputField name="ПользовательИБПользовательОСИсточник" id="87">
+																	<DataPath>ПользовательИБПользовательОСИсточник</DataPath>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="ПользовательИБПользовательОСИсточникКонтекстноеМеню" id="88"/>
+																	<ExtendedTooltip name="ПользовательИБПользовательОСИсточникРасширеннаяПодсказка" id="89"/>
+																	<Events>
+																		<Event name="StartChoice">ПользовательИБПользовательОСИсточникНачалоВыбора</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<Table name="ГруппыПользователейИсточника" id="133">
+													<Representation>List</Representation>
+													<Height>5</Height>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ГруппыПользователейИсточника</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ГруппыПользователейИсточникаКонтекстноеМеню" id="134"/>
+													<AutoCommandBar name="ГруппыПользователейИсточникаКоманднаяПанель" id="135">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ГруппыПользователейИсточникаРасширеннаяПодсказка" id="136"/>
+													<SearchStringAddition name="ГруппыПользователейИсточникаСтрокаПоиска" id="137">
+														<AdditionSource>
+															<Item>ГруппыПользователейИсточника</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейИсточникаСтрокаПоискаКонтекстноеМеню" id="138"/>
+														<ExtendedTooltip name="ГруппыПользователейИсточникаСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ГруппыПользователейИсточникаСостояниеПросмотра" id="140">
+														<AdditionSource>
+															<Item>ГруппыПользователейИсточника</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейИсточникаСостояниеПросмотраКонтекстноеМеню" id="141"/>
+														<ExtendedTooltip name="ГруппыПользователейИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ГруппыПользователейИсточникаУправлениеПоиском" id="143">
+														<AdditionSource>
+															<Item>ГруппыПользователейИсточника</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейИсточникаУправлениеПоискомКонтекстноеМеню" id="144"/>
+														<ExtendedTooltip name="ГруппыПользователейИсточникаУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ГруппыПользователейИсточникГруппаПользователей" id="146">
+															<DataPath>ГруппыПользователейИсточника.ГруппаПользователей</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ГруппыПользователейИсточникГруппаПользователейКонтекстноеМеню" id="147"/>
+															<ExtendedTooltip name="ГруппыПользователейИсточникГруппаПользователейРасширеннаяПодсказка" id="148"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<Table name="ГруппыДоступаИсточника" id="101">
+													<Representation>List</Representation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ГруппыДоступаИсточника</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ГруппыДоступаИсточникаКонтекстноеМеню" id="102"/>
+													<AutoCommandBar name="ГруппыДоступаИсточникаКоманднаяПанель" id="103">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ГруппыДоступаИсточникаРасширеннаяПодсказка" id="104"/>
+													<SearchStringAddition name="ГруппыДоступаИсточникаСтрокаПоиска" id="105">
+														<AdditionSource>
+															<Item>ГруппыДоступаИсточника</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаИсточникаСтрокаПоискаКонтекстноеМеню" id="106"/>
+														<ExtendedTooltip name="ГруппыДоступаИсточникаСтрокаПоискаРасширеннаяПодсказка" id="107"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ГруппыДоступаИсточникаСостояниеПросмотра" id="108">
+														<AdditionSource>
+															<Item>ГруппыДоступаИсточника</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаИсточникаСостояниеПросмотраКонтекстноеМеню" id="109"/>
+														<ExtendedTooltip name="ГруппыДоступаИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="110"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ГруппыДоступаИсточникаУправлениеПоиском" id="111">
+														<AdditionSource>
+															<Item>ГруппыДоступаИсточника</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаИсточникаУправлениеПоискомКонтекстноеМеню" id="112"/>
+														<ExtendedTooltip name="ГруппыДоступаИсточникаУправлениеПоискомРасширеннаяПодсказка" id="113"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ГруппыДоступаИсточникаГруппаДоступаИсточника" id="114">
+															<DataPath>ГруппыДоступаИсточника.ГруппаДоступа</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ГруппыДоступаИсточникаГруппаДоступаИсточникаКонтекстноеМеню" id="115"/>
+															<ExtendedTooltip name="ГруппыДоступаИсточникаГруппаДоступаИсточникаРасширеннаяПодсказка" id="116"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="ТСДИсточник" id="233">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ТСД</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ТСДИсточник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="ТСДИсточникРасширеннаяПодсказка" id="234"/>
+													<ChildItems>
+														<InputField name="ДоступВТСДИсточник" id="235">
+															<DataPath>ДоступВТСДИсточник</DataPath>
+															<DropListButton>true</DropListButton>
+															<ListChoiceMode>true</ListChoiceMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Кладовщик</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Размещение</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Ревизор</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ДоступВТСДИсточникКонтекстноеМеню" id="236"/>
+															<ExtendedTooltip name="ДоступВТСДИсточникРасширеннаяПодсказка" id="237"/>
+														</InputField>
+														<InputField name="СкладыТСДИсточник" id="238">
+															<DataPath>СкладыТСДИсточник</DataPath>
+															<DropListButton>true</DropListButton>
+															<OpenButton>true</OpenButton>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="СкладыТСДИсточникКонтекстноеМеню" id="239"/>
+															<ExtendedTooltip name="СкладыТСДИсточникРасширеннаяПодсказка" id="240"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПриемник" id="66">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приемник</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа приемник</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ГруппаПриемникРасширеннаяПодсказка" id="67"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаФизЛицоПользовательПриемник" id="227">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ лицо пользователь приемник</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ лицо пользователь приемник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаФизЛицоПользовательПриемникРасширеннаяПодсказка" id="228"/>
+													<ChildItems>
+														<InputField name="ФизЛицоПриемник" id="70">
+															<DataPath>ФизЛицоПриемник</DataPath>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ФизЛицоПриемникКонтекстноеМеню" id="71"/>
+															<ExtendedTooltip name="ФизЛицоПриемникРасширеннаяПодсказка" id="72"/>
+															<Events>
+																<Event name="ChoiceProcessing">ФизЛицоПриемникОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПользовательПриемник" id="78">
+															<DataPath>ПользовательПриемник</DataPath>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ПользовательПриемникКонтекстноеМеню" id="79"/>
+															<ExtendedTooltip name="ПользовательПриемникРасширеннаяПодсказка" id="80"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаАутентификацияПриемник" id="90">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Аутентификация</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа аутентификация приемник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>StrongSeparation</Representation>
+													<ExtendedTooltip name="ГруппаАутентификацияПриемникРасширеннаяПодсказка" id="91"/>
+													<ChildItems>
+														<CheckBoxField name="ПользовательПриемникНедействителен" id="200">
+															<DataPath>ПользовательПриемник.Недействителен</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПользовательПриемникНедействителенКонтекстноеМеню" id="201"/>
+															<ExtendedTooltip name="ПользовательПриемникНедействителенРасширеннаяПодсказка" id="202"/>
+														</CheckBoxField>
+														<UsualGroup name="ГруппаАвторизацияПароль" id="214">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа авторизация пароль</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа авторизация пароль</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаАвторизацияПарольРасширеннаяПодсказка" id="215"/>
+															<ChildItems>
+																<CheckBoxField name="ПользовательИБАутентификацияСтандартнаяПриемник" id="92">
+																	<DataPath>ПользовательИБАутентификацияСтандартнаяПриемник</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПользовательИБАутентификацияСтандартнаяПриемникКонтекстноеМеню" id="93"/>
+																	<ExtendedTooltip name="ПользовательИБАутентификацияСтандартнаяПриемникРасширеннаяПодсказка" id="94"/>
+																</CheckBoxField>
+																<LabelDecoration name="ДекорацияРазделить" id="249">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>|</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ДекорацияРазделитьКонтекстноеМеню" id="250"/>
+																	<ExtendedTooltip name="ДекорацияРазделитьРасширеннаяПодсказка" id="251"/>
+																</LabelDecoration>
+																<InputField name="ВременныйПарольПриемник" id="211">
+																	<DataPath>ВременныйПарольПриемник</DataPath>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="ВременныйПарольПриемникКонтекстноеМеню" id="212"/>
+																	<ExtendedTooltip name="ВременныйПарольПриемникРасширеннаяПодсказка" id="213"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<CheckBoxField name="ПотребоватьСменуПароляПриВходеПриемник" id="206">
+															<DataPath>ПотребоватьСменуПароляПриВходеПриемник</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПотребоватьСменуПароляПриВходеПриемникКонтекстноеМеню" id="207"/>
+															<ExtendedTooltip name="ПотребоватьСменуПароляПриВходеПриемникРасширеннаяПодсказка" id="208">
+																<Title formatted="true"/>
+																<Events>
+																	<Event name="URLProcessing">ПотребоватьСменуПароляПриВходеРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+																</Events>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ПотребоватьСменуПароляПриВходеПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="АутентификацияОСПриемник" id="231">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аутентификация ОСПриемник</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аутентификация ОСПриемник</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="АутентификацияОСПриемникРасширеннаяПодсказка" id="232"/>
+															<ChildItems>
+																<CheckBoxField name="ПользовательИБАутентификацияОСПриемник" id="95">
+																	<DataPath>ПользовательИБАутентификацияОСПриемник</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПользовательИБАутентификацияОСПриемникКонтекстноеМеню" id="96"/>
+																	<ExtendedTooltip name="ПользовательИБАутентификацияОСПриемникРасширеннаяПодсказка" id="97"/>
+																	<Events>
+																		<Event name="OnChange">ПользовательИБАутентификацияОСПриемникПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<InputField name="ПользовательИБПользовательОСПриемник" id="98">
+																	<DataPath>ПользовательИБПользовательОСПриемник</DataPath>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="ПользовательИБПользовательОСПриемникКонтекстноеМеню" id="99"/>
+																	<ExtendedTooltip name="ПользовательИБПользовательОСПриемникРасширеннаяПодсказка" id="100"/>
+																	<Events>
+																		<Event name="StartChoice">ПользовательИБПользовательОСПриемникНачалоВыбора</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<Table name="ГруппыПользователейПриемника" id="149">
+													<Representation>List</Representation>
+													<Height>5</Height>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ГруппыПользователейПриемника</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ГруппыПользователейПриемникаКонтекстноеМеню" id="150"/>
+													<AutoCommandBar name="ГруппыПользователейПриемникаКоманднаяПанель" id="151">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ГруппыПользователейПриемникаРасширеннаяПодсказка" id="152"/>
+													<SearchStringAddition name="ГруппыПользователейПриемникаСтрокаПоиска" id="153">
+														<AdditionSource>
+															<Item>ГруппыПользователейПриемника</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейПриемникаСтрокаПоискаКонтекстноеМеню" id="154"/>
+														<ExtendedTooltip name="ГруппыПользователейПриемникаСтрокаПоискаРасширеннаяПодсказка" id="155"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ГруппыПользователейПриемникаСостояниеПросмотра" id="156">
+														<AdditionSource>
+															<Item>ГруппыПользователейПриемника</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейПриемникаСостояниеПросмотраКонтекстноеМеню" id="157"/>
+														<ExtendedTooltip name="ГруппыПользователейПриемникаСостояниеПросмотраРасширеннаяПодсказка" id="158"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ГруппыПользователейПриемникаУправлениеПоиском" id="159">
+														<AdditionSource>
+															<Item>ГруппыПользователейПриемника</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыПользователейПриемникаУправлениеПоискомКонтекстноеМеню" id="160"/>
+														<ExtendedTooltip name="ГруппыПользователейПриемникаУправлениеПоискомРасширеннаяПодсказка" id="161"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ГруппыПользователейПриемникаГруппаПользователей" id="162">
+															<DataPath>ГруппыПользователейПриемника.ГруппаПользователей</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ГруппыПользователейПриемникаГруппаПользователейКонтекстноеМеню" id="163"/>
+															<ExtendedTooltip name="ГруппыПользователейПриемникаГруппаПользователейРасширеннаяПодсказка" id="164"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<Table name="ГруппыДоступаПриемника" id="117">
+													<Representation>List</Representation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ГруппыДоступаПриемника</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ГруппыДоступаПриемникаКонтекстноеМеню" id="118"/>
+													<AutoCommandBar name="ГруппыДоступаПриемникаКоманднаяПанель" id="119">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ГруппыДоступаПриемникаРасширеннаяПодсказка" id="120"/>
+													<SearchStringAddition name="ГруппыДоступаПриемникаСтрокаПоиска" id="121">
+														<AdditionSource>
+															<Item>ГруппыДоступаПриемника</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаПриемникаСтрокаПоискаКонтекстноеМеню" id="122"/>
+														<ExtendedTooltip name="ГруппыДоступаПриемникаСтрокаПоискаРасширеннаяПодсказка" id="123"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ГруппыДоступаПриемникаСостояниеПросмотра" id="124">
+														<AdditionSource>
+															<Item>ГруппыДоступаПриемника</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаПриемникаСостояниеПросмотраКонтекстноеМеню" id="125"/>
+														<ExtendedTooltip name="ГруппыДоступаПриемникаСостояниеПросмотраРасширеннаяПодсказка" id="126"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ГруппыДоступаПриемникаУправлениеПоиском" id="127">
+														<AdditionSource>
+															<Item>ГруппыДоступаПриемника</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ГруппыДоступаПриемникаУправлениеПоискомКонтекстноеМеню" id="128"/>
+														<ExtendedTooltip name="ГруппыДоступаПриемникаУправлениеПоискомРасширеннаяПодсказка" id="129"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ГруппыДоступаПриемникаГруппаДоступаПриемника" id="130">
+															<DataPath>ГруппыДоступаПриемника.ГруппаДоступа</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ГруппыДоступаПриемникаГруппаДоступаПриемникаКонтекстноеМеню" id="131"/>
+															<ExtendedTooltip name="ГруппыДоступаПриемникаГруппаДоступаПриемникаРасширеннаяПодсказка" id="132"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="ТСДПриемник" id="241">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ТСД</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ТСДПриемник</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="ТСДПриемникРасширеннаяПодсказка" id="242"/>
+													<ChildItems>
+														<InputField name="ДоступВТСДПриемник" id="243">
+															<DataPath>ДоступВТСДПриемник</DataPath>
+															<DropListButton>true</DropListButton>
+															<ListChoiceMode>true</ListChoiceMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Кладовщик</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Размещение</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xs:string">Ревизор</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ДоступВТСДПриемникКонтекстноеМеню" id="244"/>
+															<ExtendedTooltip name="ДоступВТСДПриемникРасширеннаяПодсказка" id="245"/>
+														</InputField>
+														<InputField name="СкладыТСДПриемник" id="246">
+															<DataPath>СкладыТСДПриемник</DataPath>
+															<DropListButton>true</DropListButton>
+															<OpenButton>true</OpenButton>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="СкладыТСДПриемникКонтекстноеМеню" id="247"/>
+															<ExtendedTooltip name="СкладыТСДПриемникРасширеннаяПодсказка" id="248"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПЛ_ДобавлениеПользователей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТЗДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗДанные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФизЛицо" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физ лицо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="ДоступВ1С" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ в 1С</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоступВТСД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ в ТСД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВременныйПароль" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Временный пароль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Склады" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склады</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗадачаБитрикс" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача битрикс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Делегировать" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Делегировать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Авторизация" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авторизация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СкладыДляЗагрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады для загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>СкладыДляЗагрузки</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПолныеПрава" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полные права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Департамент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Департамент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПЛ_Департамент_ЗУП</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицоИсточник" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИсточник" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицоПриемник" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательПриемник" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБАутентификацияСтандартнаяИсточник" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аутентификация 1С:Предприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБАутентификацияСтандартнаяПриемник" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аутентификация 1С:Предприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБАутентификацияОСИсточник" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аутентификация ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБАутентификацияОСПриемник" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аутентификация ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБПользовательОСИсточник" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБПользовательОСПриемник" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппыДоступаИсточника" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаДоступа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ГруппыДоступаПриемника" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаДоступа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ГруппыПользователейИсточника" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы пользователей источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаПользователей" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ГруппыПользователейПриемника" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы пользователей приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаПользователей" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОчищатьНастройкиПриемника" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очищать настройки приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОчищатьНастройкиПриемника</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НеПереноситьИнциденты" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не переносить инциденты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НеПереноситьИнциденты</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НомерЗадачиБитрикс" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер задачи битрикс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДелегироватьЗадачу" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Делегировать задачу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ДелегироватьЗадачу</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПотребоватьСменуПароляПриВходеИсточник" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потребовать смену пароля при входе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПотребоватьСменуПароляПриВходеПриемник" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потребовать смену пароля при входе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВременныйПарольПриемник" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временный пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалятьИзГрупп" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалять из групп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступВТСДИсточник" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступ в ТСД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкладыТСДИсточник" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоступВТСДПриемник" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступ в ТСД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкладыТСДПриемник" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="КопироватьНастройки" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>КопироватьНастройки</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВставитьИзБуфера" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить из буфера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить из буфера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьИзБуфера</Action>
+		</Command>
+		<Command name="ЗавестиПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завести пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завести пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавестиПользователей</Action>
+		</Command>
+		<Command name="СкопироватьНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьНастройки</Action>
+		</Command>
+		<Command name="УстановитьНастройки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьНастройки</Action>
+		</Command>
+		<Command name="Очистить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.НовостиКорзина</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Очистить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
